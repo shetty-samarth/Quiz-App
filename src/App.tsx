@@ -36,8 +36,8 @@ const App = () => {
     setLoading(false);
   }
   console.log('questions',questions);
-  let vals:any[] = questions[number].question;
-  console.log(vals);
+  console.log(typeof(questions[number].question))
+  // console.log('vals',vals.question);
   const checkAns = (e: React.MouseEvent<HTMLButtonElement>) =>{
 
   }
@@ -54,13 +54,13 @@ const App = () => {
 
       {loading? <p>Loading Question ......</p>:null}
 
-      {!gameOver && !loading && (<QuestionCard 
+      {/* {!gameOver && !loading && (<QuestionCard 
       questionNr = {number}
       totalQuestions={TOTAL}
-      question = {questions[number].question}
-      answer = {questions[number].answers}
+      question = {vals.question}
+      answer = {vals.answers}
       userAnswer = {answer? answer[number] : undefined} 
-      callback = {checkAns}/>)}
+      callback = {checkAns}/>)} */}
       
 
       <button className="next" onClick={nextQuestion}>Next Question</button>

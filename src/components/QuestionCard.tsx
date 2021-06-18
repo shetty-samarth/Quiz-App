@@ -1,7 +1,7 @@
 import React from 'react'
 
 type Props = {
-    question:string;
+    question:any;
     answer: string[];
     callback:any;
     userAnswer: any;
