@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import QuestionCard from './components/QuestionCard';
 import {fetchQuizQuestions} from './API'
-import {QuestionState, Difficulty} from './API';
+import {QuestionsState, Difficulty} from './API';
 
 type AnswerObject = {
   question: string;
@@ -54,13 +54,13 @@ const App = () => {
 
       {loading? <p>Loading Question ......</p>:null}
 
-      {/* {!gameOver && !loading && (<QuestionCard 
+      {!gameOver && !loading && (<QuestionCard 
       questionNr = {number}
       totalQuestions={TOTAL}
-      question = {vals.question}
-      answer = {vals.answers}
+      question = {questions[number].question}
+      answer = {questions[number].question}
       userAnswer = {answer? answer[number] : undefined} 
-      callback = {checkAns}/>)} */}
+      callback = {checkAns}/>)}
       
 
       <button className="next" onClick={nextQuestion}>Next Question</button>
